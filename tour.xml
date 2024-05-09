@@ -3,7 +3,6 @@
 	<include url="skin/vtourskin.xml" />
 	<include url="%VIEWER%/plugins/webvr.xml" />
 	<include url="plugins/circle_hotspots.xml" />
-	<plugin nam="toolbox" url="toolbox/toolboxV2.js" keep="true" preload="true" />
 
 	<layer name="intro"
 		type="container"
