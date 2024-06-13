@@ -35,9 +35,29 @@
 		/>
 	</layer>
 
-	<layer name="creditos" url="recursos/cartel_creditos.png" keep="true" enabled="true" align="centercenter" x="0" y="0" visible="false" alpha="1" scale="0.6" scale.mobile="0.2" onclick="set(layer[creditos].visible,false);"/>
-	<layer name="botoncreditos" url="recursos/botoncreditos.png" keep="true" enabled="true" align="leftbottom" x="10" y="5" scale="0.4" scale.mobile="0.2" onclick="set(layer[creditos].visible,true);"/>
-	<action name="flyout_hotspot"> for(set(i,0), i LT hotspot.count, inc(i), copy(hs, hotspot[get(i)]); if(hs.name != name AND hs.style == 'flyoutimage' AND (hs.flying_state == 'out' OR hs.flying_state == 'flyingout'), callwith(hs, flyout_hotspot() ); ); ); if(flying_state == 'flyingout', set(flying_state, 'flyingin'); , if(flying_state == 'flyingin', set(flying_state, 'flyingout'); ); ); if(flying_state == 'in', calc(backup_state, '0.0|' + rx + '|' + ry + '|' + rz + '|' + scale); copy(backup_zorder, zorder); set(flying_state, 'flyingout'); ); if(flying_state == 'out', set(flying_state, 'flyingin'); ); if(flying_state == 'flyingout', set(zorder, 99); tween(alpha, 1,2); tween(flying|rx|ry|rz|scale, '0.0|0.0|0.0|0.0|1.0',2, default, set(flying_state,'out'); set(capture,true); ); ); if(flying_state == 'flyingout' AND webvr.isenabled, set(zorder, 99); tween(alpha, 1 ,2); tween(flying|rx|ry|rz|scale, '1.0|0.0|0.0|0.0|0.3',2, default, set(flying_state,'in'); set(capture,true); ); delayedcall(6.0, set(visible, false); ); ); if(flying_state == 'flyingin', sub(zorder,1); tween(alpha, 0 ,2); set(capture,false); tween(flying|rx|ry|rz|scale, get(backup_state), 1, default, set(flying_state,'in'); copy(zorder,backup_zorder); ); ); if(flying_state == 'flyingin' AND webvr.isenabled, sub(zorder,1); tween(alpha, 0 ,2); set(capture,false); tween(flying|rx|ry|rz|scale, get(backup_state), 1, default, set(flying_state,'in'); copy(zorder,backup_zorder); ); ); </action>
+	<layer name="creditos" url="recursos/cartel_creditos.png" keep="true" enabled="true"
+		align="centercenter" x="0" y="0" visible="false" alpha="1" scale="0.6" scale.mobile="0.2"
+		onclick="set(layer[creditos].visible,false);" />
+	<layer name="botoncreditos" url="recursos/botoncreditos.png" keep="true" enabled="true"
+		align="leftbottom" x="10" y="5" scale="0.4" scale.mobile="0.2"
+		onclick="set(layer[creditos].visible,true);" />
+	<action name="flyout_hotspot"> for(set(i,0), i LT hotspot.count, inc(i), copy(hs,
+		hotspot[get(i)]); if(hs.name != name AND hs.style == 'flyoutimage' AND (hs.flying_state ==
+		'out' OR hs.flying_state == 'flyingout'), callwith(hs, flyout_hotspot() ); ); );
+		if(flying_state == 'flyingout', set(flying_state, 'flyingin'); , if(flying_state ==
+		'flyingin', set(flying_state, 'flyingout'); ); ); if(flying_state == 'in',
+		calc(backup_state, '0.0|' + rx + '|' + ry + '|' + rz + '|' + scale); copy(backup_zorder,
+		zorder); set(flying_state, 'flyingout'); ); if(flying_state == 'out', set(flying_state,
+		'flyingin'); ); if(flying_state == 'flyingout', set(zorder, 99); tween(alpha, 1,2);
+		tween(flying|rx|ry|rz|scale, '0.0|0.0|0.0|0.0|1.0',2, default, set(flying_state,'out');
+		set(capture,true); ); ); if(flying_state == 'flyingout' AND webvr.isenabled, set(zorder,
+		99); tween(alpha, 1 ,2); tween(flying|rx|ry|rz|scale, '1.0|0.0|0.0|0.0|0.3',2, default,
+		set(flying_state,'in'); set(capture,true); ); delayedcall(6.0, set(visible, false); ); );
+		if(flying_state == 'flyingin', sub(zorder,1); tween(alpha, 0 ,2); set(capture,false);
+		tween(flying|rx|ry|rz|scale, get(backup_state), 1, default, set(flying_state,'in');
+		copy(zorder,backup_zorder); ); ); if(flying_state == 'flyingin' AND webvr.isenabled,
+		sub(zorder,1); tween(alpha, 0 ,2); set(capture,false); tween(flying|rx|ry|rz|scale,
+		get(backup_state), 1, default, set(flying_state,'in'); copy(zorder,backup_zorder); ); ); </action>
 
 	<action name="on_intro_click">
 		tween(layer[intro].alpha, 0);
@@ -195,9 +215,9 @@
 			<cube url="panos/00-2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.886" atv="3.031"
+		<hotspot name="spot1" style="skin_waves" ath="2.886" atv="3.031"
 			linkedscene="scene_00-3" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="73.239" atv="1.458"
+		<hotspot name="spot2" style="skin_waves" ath="73.239" atv="1.458"
 			linkedscene="scene_00-1" linkedscene_lookat="-188.49,-5.29,120.0" />
 
 
@@ -217,7 +237,7 @@
 			url="recursos/informacion_intro.png"
 			ath="0.27781207819078"
 			atv="-0.20966817201976"
-			scale="1.06860000000000"
+			scale="0.5"
 			depth="1000"
 			rx="0" ry="0" rz="0"
 			ox="0.0" oy="0.0"
@@ -257,7 +277,7 @@
 			<cube url="panos/R0010004.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.674" atv="6.054"
+		<hotspot name="spot1" style="skin_waves" ath="0.674" atv="6.054"
 			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -277,9 +297,9 @@
 			<cube url="panos/R0010005.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.066" atv="10.370"
+		<hotspot name="spot1" style="skin_waves" ath="2.066" atv="10.370"
 			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-179.123" atv="6.617"
+		<hotspot name="spot2" style="skin_waves" ath="-179.123" atv="6.617"
 			linkedscene="scene_r0010004" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -299,9 +319,9 @@
 			<cube url="panos/R0010006.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="3.946" atv="7.722"
+		<hotspot name="spot3" style="skin_waves" ath="3.946" atv="7.722"
 			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="-174.608" atv="11.290"
+		<hotspot name="spot4" style="skin_waves" ath="-174.608" atv="11.290"
 			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -321,11 +341,11 @@
 			<cube url="panos/R0010007.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.563" atv="5.739"
+		<hotspot name="spot1" style="skin_waves" ath="-0.563" atv="5.739"
 			linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="98.396" atv="6.278"
+		<hotspot name="spot2" style="skin_waves" ath="98.396" atv="6.278"
 			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-91.111" atv="4.460"
+		<hotspot name="spot3" style="skin_waves" ath="-91.111" atv="4.460"
 			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 
@@ -347,9 +367,9 @@
 			<cube url="panos/R0010008.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="16.614" atv="8.217"
+		<hotspot name="spot1" style="skin_waves" ath="16.614" atv="8.217"
 			linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-179.972" atv="13.064"
+		<hotspot name="spot2" style="skin_waves" ath="-179.972" atv="13.064"
 			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 
@@ -376,7 +396,7 @@
 			<cube url="panos/AHR0010152_20240410110954.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="94.577" atv="8.151"
+		<hotspot name="spot1" style="skin_waves" ath="94.577" atv="8.151"
 			linkedscene="scene_r0010154" linkedscene_lookat="0.73,3.87,120.0" />
 
 	</scene>
@@ -396,7 +416,7 @@
 			<cube url="panos/R0010010.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-100.646" atv="9.409"
+		<hotspot name="spot1" style="skin_waves" ath="-100.646" atv="9.409"
 			linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -421,11 +441,11 @@
 			<cube url="panos/AHR0010154.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="128.806" atv="23.042"
+		<hotspot name="spot1" style="skin_waves" ath="128.806" atv="23.042"
 			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="85.745" atv="19.717"
+		<hotspot name="spot2" style="skin_waves" ath="85.745" atv="19.717"
 			linkedscene="scene_r0010010" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-92.104" atv="4.978"
+		<hotspot name="spot3" style="skin_waves" ath="-92.104" atv="4.978"
 			linkedscene="scene_r0010015" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 		<hotspot name="info"
@@ -443,7 +463,7 @@
 
 		<hotspot name="image_text"
 			type="image"
-			url="recursos/cartel_info_lab.png"
+			url="recursos/Lab_Cardiologia.png"
 			ath="12.625"
 			atv="-5.394"
 			scale="0.53000000000000"
@@ -455,7 +475,7 @@
 			enabled="false"
 			distorted="true"
 			onclick="tween(hotspot[image_text].alpha, 0, 0.5); set(hotspot[image_text].enabled, false);" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="-55.247" atv="1.572"
+		<hotspot name="spot4" style="skin_waves" ath="-55.247" atv="1.572"
 			linkedscene="scene_r0010152_20240410110954" linkedscene_lookat="-350.98,6.64,120.0" />
 
 	</scene>
@@ -475,9 +495,9 @@
 			<cube url="panos/R0010011.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-48.150" atv="8.810"
+		<hotspot name="spot1" style="skin_waves" ath="-48.150" atv="8.810"
 			linkedscene="scene_r0010012" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="85.695" atv="19.463"
+		<hotspot name="spot2" style="skin_waves" ath="85.695" atv="19.463"
 			linkedscene="scene_r0010015" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -497,7 +517,7 @@
 			<cube url="panos/R0010012.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="28.916" atv="7.152"
+		<hotspot name="spot1" style="skin_waves" ath="28.916" atv="7.152"
 			linkedscene="scene_r0010011" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 		<hotspot name="video"
@@ -556,9 +576,9 @@
 			<cube url="panos/R0010013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="7.850" atv="15.623"
+		<hotspot name="spot3" style="skin_waves" ath="7.850" atv="15.623"
 			linkedscene="scene_r0010014" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="80.577" atv="9.277"
+		<hotspot name="spot4" style="skin_waves" ath="80.577" atv="9.277"
 			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -686,7 +706,7 @@
 
 		<hotspot name="image_text"
 			type="image"
-			url="recursos/Laboratorio_Obstetricia_y_Ginecología.png"
+			url="recursos/Lab_Obstetricia_y_Ginecologia.png"
 			ath="12.625"
 			atv="-5.394"
 			scale="0.53"
@@ -698,9 +718,9 @@
 			enabled="false"
 			distorted="true"
 			onclick="tween(hotspot[image_text].alpha, 0, 0.5); set(hotspot[image_text].enabled, false);" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="-88.285" atv="11.844"
+		<hotspot name="spot4" style="skin_waves" ath="-88.285" atv="11.844"
 			linkedscene="scene_r0010011" linkedscene_lookat="-350.98,6.64,120.0" />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="95.274" atv="13.399"
+		<hotspot name="spot1" style="skin_waves" ath="95.274" atv="13.399"
 			linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -720,7 +740,7 @@
 			<cube url="panos/debajo_AJ.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-4.272" atv="5.269"
+		<hotspot name="spot1" style="skin_waves" ath="-4.272" atv="5.269"
 			linkedscene="scene_puntodeencuentro_ah_aj" linkedscene_lookat="0.0,0.0,120.0" />
 
 		<hotspot name="cartel_bosquesito"
@@ -735,7 +755,7 @@
 			ox="0.0" oy="0.0"
 			tx="0" ty="0" tz="0"
 			width="863px" height="494px" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="172.140" atv="5.954"
+		<hotspot name="spot2" style="skin_waves" ath="172.140" atv="5.954"
 			linkedscene="scene_b01" linkedscene_lookat="2.42,-12.35,120.0" />
 
 	</scene>
@@ -756,9 +776,9 @@
 				multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-8.332" atv="2.572"
+		<hotspot name="spot1" style="skin_waves" ath="-8.332" atv="2.572"
 			linkedscene="scene_ruta1_bosquesito" linkedscene_lookat="23.42,-0.0,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-173.614" atv="0.869"
+		<hotspot name="spot2" style="skin_waves" ath="-173.614" atv="0.869"
 			linkedscene="scene_debajo_aj" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -778,9 +798,9 @@
 			<cube url="panos/rutaAJ.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-155.103" atv="8.954"
+		<hotspot name="spot1" style="skin_waves" ath="-155.103" atv="8.954"
 			linkedscene="scene_puntodeencuentro_ah_aj" linkedscene_lookat="191.9,4.45,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="8.394" atv="4.332"
+		<hotspot name="spot2" style="skin_waves" ath="8.394" atv="4.332"
 			linkedscene="scene_01-3" linkedscene_lookat="274.84,12.13,120.0" />
 		<hotspot name="cartel_ah2"
 			type="image"
@@ -809,9 +829,9 @@
 			<cube url="panos/00-1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="3.985" atv="5.445"
+		<hotspot name="spot1" style="skin_waves" ath="3.985" atv="5.445"
 			linkedscene="scene_00-2" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="179.697" atv="5.969"
+		<hotspot name="spot2" style="skin_waves" ath="179.697" atv="5.969"
 			linkedscene="scene_01-3" linkedscene_lookat="-111.84,3.77,120.0" />
 
 		<hotspot name="cartel_ah1"
@@ -841,7 +861,7 @@
 			<cube url="panos/00-3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-4.334" atv="6.591"
+		<hotspot name="spot1" style="skin_waves" ath="-4.334" atv="6.591"
 			linkedscene="scene_00-2" linkedscene_lookat="81.2,1.24,120.0" />
 	</scene>
 
@@ -859,9 +879,9 @@
 			<cube url="panos/01-1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.885" atv="10.146"
+		<hotspot name="spot1" style="skin_waves" ath="2.885" atv="10.146"
 			linkedscene="scene_01-2" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-153.982" atv="4.940"
+		<hotspot name="spot2" style="skin_waves" ath="-153.982" atv="4.940"
 			linkedscene="scene_r0010014" linkedscene_lookat="-12.69,3.62,120.0" />
 	</scene>
 
@@ -879,9 +899,9 @@
 			<cube url="panos/01-2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-7.023" atv="5.081"
+		<hotspot name="spot1" style="skin_waves" ath="-7.023" atv="5.081"
 			linkedscene="scene_01-3" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="104.708" atv="12.361"
+		<hotspot name="spot2" style="skin_waves" ath="104.708" atv="12.361"
 			linkedscene="scene_01-1" linkedscene_lookat="-171.32,-1.06,120.0" />
 	</scene>
 
@@ -898,11 +918,11 @@
 			<cube url="panos/01-3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="12.522" atv="4.350"
+		<hotspot name="spot1" style="skin_waves" ath="12.522" atv="4.350"
 			linkedscene="scene_00-1" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-167.586" atv="4.416"
+		<hotspot name="spot2" style="skin_waves" ath="-167.586" atv="4.416"
 			linkedscene="scene_ruta1_bosquesito" linkedscene_lookat="-163.89,0.5,120.0" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-102.015" atv="8.653"
+		<hotspot name="spot3" style="skin_waves" ath="-102.015" atv="8.653"
 			linkedscene="scene_01-2" linkedscene_lookat="103.58,12.1,120.0" />
 	</scene>
 
@@ -924,11 +944,11 @@
 			<cube url="panos/b01.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-12.327" atv="24.050"
+		<hotspot name="spot1" style="skin_waves" ath="-12.327" atv="24.050"
 			linkedscene="scene_b02" linkedscene_lookat="8.91,0.48,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="70.042" atv="5.843"
+		<hotspot name="spot2" style="skin_waves" ath="70.042" atv="5.843"
 			linkedscene="scene_b09" linkedscene_lookat="-195.74,-5.91,120.0" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="178.431" atv="10.534"
+		<hotspot name="spot3" style="skin_waves" ath="178.431" atv="10.534"
 			linkedscene="scene_debajo_aj" linkedscene_lookat="0.0,0.0,120.0" />
 
 	</scene>
@@ -952,9 +972,9 @@
 			<cube url="panos/b02.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="146.167" atv="3.135"
+		<hotspot name="spot1" style="skin_waves" ath="146.167" atv="3.135"
 			linkedscene="scene_b01" linkedscene_lookat="180.6,6.28,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="7.251" atv="12.245"
+		<hotspot name="spot2" style="skin_waves" ath="7.251" atv="12.245"
 			linkedscene="scene_b03" linkedscene_lookat="-14.14,3.49,120.0" />
 
 	</scene>
@@ -978,9 +998,9 @@
 			<cube url="panos/b03-01.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-146.142" atv="5.346"
+		<hotspot name="spot1" style="skin_waves" ath="-146.142" atv="5.346"
 			linkedscene="scene_b03" linkedscene_lookat="145.04,0.8,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="153.586" atv="8.385"
+		<hotspot name="spot2" style="skin_waves" ath="153.586" atv="8.385"
 			linkedscene="scene_b04" linkedscene_lookat="45.1,-2.7,120.0" />
 
 	</scene>
@@ -1004,11 +1024,11 @@
 			<cube url="panos/b03.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.729" atv="11.236"
+		<hotspot name="spot1" style="skin_waves" ath="-0.729" atv="11.236"
 			linkedscene="scene_b04" linkedscene_lookat="-8.1,-0.16,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-70.695" atv="9.630"
+		<hotspot name="spot2" style="skin_waves" ath="-70.695" atv="9.630"
 			linkedscene="scene_b03-01" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="178.441" atv="8.990"
+		<hotspot name="spot3" style="skin_waves" ath="178.441" atv="8.990"
 			linkedscene="scene_b02" linkedscene_lookat="151.45,-10.44,120.0" />
 
 	</scene>
@@ -1032,11 +1052,11 @@
 			<cube url="panos/b04.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="4.712" atv="14.086"
+		<hotspot name="spot1" style="skin_waves" ath="4.712" atv="14.086"
 			linkedscene="scene_b05" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-142.757" atv="8.529"
+		<hotspot name="spot2" style="skin_waves" ath="-142.757" atv="8.529"
 			linkedscene="scene_b03-01" linkedscene_lookat="-22.36,-1.27,120.0" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="151.508" atv="14.272"
+		<hotspot name="spot3" style="skin_waves" ath="151.508" atv="14.272"
 			linkedscene="scene_b03" linkedscene_lookat="188.32,2.23,120.0" />
 
 	</scene>
@@ -1060,9 +1080,9 @@
 			<cube url="panos/b05.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="3.909" atv="3.408"
+		<hotspot name="spot1" style="skin_waves" ath="3.909" atv="3.408"
 			linkedscene="scene_b06" linkedscene_lookat="-26.21,-11.28,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-130.011" atv="22.180"
+		<hotspot name="spot2" style="skin_waves" ath="-130.011" atv="22.180"
 			linkedscene="scene_b04" linkedscene_lookat="-132.16,3.11,120.0" />
 
 	</scene>
@@ -1086,9 +1106,9 @@
 			<cube url="panos/b06.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.377" atv="2.662"
+		<hotspot name="spot1" style="skin_waves" ath="2.377" atv="2.662"
 			linkedscene="scene_b07" linkedscene_lookat="-115.19,-2.29,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="96.759" atv="12.716"
+		<hotspot name="spot2" style="skin_waves" ath="96.759" atv="12.716"
 			linkedscene="scene_b05" linkedscene_lookat="-167.93,-6.2,120.0" />
 
 	</scene>
@@ -1112,13 +1132,13 @@
 			<cube url="panos/b07.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-161.625" atv="7.582"
+		<hotspot name="spot1" style="skin_waves" ath="-161.625" atv="7.582"
 			linkedscene="scene_b08" linkedscene_lookat="-166.64,-12.82,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-10.974" atv="5.757"
+		<hotspot name="spot2" style="skin_waves" ath="-10.974" atv="5.757"
 			linkedscene="scene_b09" linkedscene_lookat="-51.58,0.32,120.0" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="92.960" atv="8.667"
+		<hotspot name="spot3" style="skin_waves" ath="92.960" atv="8.667"
 			linkedscene="scene_b06" linkedscene_lookat="-147.25,0.65,120.0" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="160.370" atv="6.719"
+		<hotspot name="spot4" style="skin_waves" ath="160.370" atv="6.719"
 			linkedscene="scene_b11" linkedscene_lookat="28.47,0.8,120.0" />
 
 	</scene>
@@ -1142,9 +1162,9 @@
 			<cube url="panos/b08.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="20.673" atv="7.384"
+		<hotspot name="spot1" style="skin_waves" ath="20.673" atv="7.384"
 			linkedscene="scene_b07" linkedscene_lookat="63.04,4.76,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="97.017" atv="10.532"
+		<hotspot name="spot2" style="skin_waves" ath="97.017" atv="10.532"
 			linkedscene="scene_b11" linkedscene_lookat="-13.18,-13.18,120.0" />
 
 	</scene>
@@ -1168,9 +1188,9 @@
 			<cube url="panos/b09.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="129.348" atv="5.505"
+		<hotspot name="spot1" style="skin_waves" ath="129.348" atv="5.505"
 			linkedscene="scene_b07" linkedscene_lookat="187.26,3.58,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-8.614" atv="-1.329"
+		<hotspot name="spot2" style="skin_waves" ath="-8.614" atv="-1.329"
 			linkedscene="scene_b01" linkedscene_lookat="-138.35,-6.66,120.0" />
 
 	</scene>
@@ -1194,11 +1214,11 @@
 			<cube url="panos/b10.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.525" atv="7.951"
+		<hotspot name="spot1" style="skin_waves" ath="0.525" atv="7.951"
 			linkedscene="scene_b12" linkedscene_lookat="30.98,-7.46,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="115.730" atv="15.812"
+		<hotspot name="spot2" style="skin_waves" ath="115.730" atv="15.812"
 			linkedscene="scene_b08" linkedscene_lookat="-61.08,-14.16,120.0" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-166.554" atv="8.726"
+		<hotspot name="spot3" style="skin_waves" ath="-166.554" atv="8.726"
 			linkedscene="scene_b07" linkedscene_lookat="-7.14,-3.01,120.0" />
 
 	</scene>
@@ -1222,9 +1242,9 @@
 			<cube url="panos/b11.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-8.435" atv="11.070"
+		<hotspot name="spot1" style="skin_waves" ath="-8.435" atv="11.070"
 			linkedscene="scene_b12" linkedscene_lookat="166.03,-15.16,120.0" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-155.116" atv="-1.357"
+		<hotspot name="spot2" style="skin_waves" ath="-155.116" atv="-1.357"
 			linkedscene="scene_b10" linkedscene_lookat="-148.69,-3.35,120.0" />
 
 	</scene>
@@ -1248,7 +1268,7 @@
 			<cube url="panos/b12.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-34.598" atv="-4.543"
+		<hotspot name="spot1" style="skin_waves" ath="-34.598" atv="-4.543"
 			linkedscene="scene_b11" linkedscene_lookat="207.65,-8.76,120.0" />
 
 	</scene>
