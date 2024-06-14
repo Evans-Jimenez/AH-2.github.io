@@ -1139,7 +1139,7 @@
 		<hotspot name="spot3" style="skin_waves" ath="92.960" atv="8.667"
 			linkedscene="scene_b06" linkedscene_lookat="-147.25,0.65,120.0" />
 		<hotspot name="spot4" style="skin_waves" ath="160.370" atv="6.719"
-			linkedscene="scene_b11" linkedscene_lookat="28.47,0.8,120.0" />
+			linkedscene="scene_b10" linkedscene_lookat="28.47,0.8,120.0" />
 
 	</scene>
 
@@ -1165,7 +1165,7 @@
 		<hotspot name="spot1" style="skin_waves" ath="20.673" atv="7.384"
 			linkedscene="scene_b07" linkedscene_lookat="63.04,4.76,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="97.017" atv="10.532"
-			linkedscene="scene_b11" linkedscene_lookat="-13.18,-13.18,120.0" />
+			linkedscene="scene_b10" linkedscene_lookat="-13.18,-13.18,120.0" />
 
 	</scene>
 
@@ -1215,7 +1215,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_waves" ath="0.525" atv="7.951"
-			linkedscene="scene_b12" linkedscene_lookat="30.98,-7.46,120.0" />
+			linkedscene="scene_b11" linkedscene_lookat="30.98,-7.46,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="115.730" atv="15.812"
 			linkedscene="scene_b08" linkedscene_lookat="-61.08,-14.16,120.0" />
 		<hotspot name="spot3" style="skin_waves" ath="-166.554" atv="8.726"
