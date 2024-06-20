@@ -357,7 +357,7 @@
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="180.886" vlookat="16.688" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0"
+		<view hlookat="6.12214930" vlookat="6.87419815" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0"
 			fovmin="70"
 			fovmax="140" limitview="auto" />
 
@@ -566,7 +566,7 @@
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-107.883" vlookat="13.292" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0"
+		<view hlookat="72.50599257" vlookat="7.80334895" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0"
 			fovmin="70"
 			fovmax="140" limitview="auto" />
 
