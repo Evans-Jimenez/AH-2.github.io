@@ -776,9 +776,9 @@
 				multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_waves" ath="-8.332" atv="2.572"
+		<hotspot name="spot1" style="skin_waves" ath="-7.2405140" atv="1.2725447"
 			linkedscene="scene_ruta1_bosquesito" linkedscene_lookat="23.42,-0.0,120.0" />
-		<hotspot name="spot2" style="skin_waves" ath="-173.614" atv="0.869"
+		<hotspot name="spot2" style="skin_waves" ath="161.0544749 atv="-0.9236492"
 			linkedscene="scene_debajo_aj" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
