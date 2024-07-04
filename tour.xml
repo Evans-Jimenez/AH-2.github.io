@@ -234,7 +234,7 @@
 
 		<hotspot name="intro_info"
 			type="image"
-			url="recursos/informacion_intro.png"
+			url="recursos/informacion_introduccion.png"
 			ath="0.27781207819078"
 			atv="-0.20966817201976"
 			scale="0.5"
