@@ -1132,6 +1132,34 @@
 			<cube url="panos/b07.tiles/vr/pano_%s.jpg" />
 		</image>
 
+		<hotspot name="info"
+			type="image"
+			url="recursos/punto_inf_2.png"
+			ath="-134.9850237"
+			atv="-20.5752897"
+			scale="1"
+			depth="1000"
+			rx="0" ry="0" rz="0"
+			ox="0.0" oy="0.0"
+			tx="0" ty="0" tz="0"
+			distorted="true"
+			onclick="tween(hotspot[image_text].alpha, 1, 0.5); set(hotspot[image_text].enabled, true);" />
+		<hotspot name="image_text"
+			type="image"
+			url="recursos/Informacion_provisional.png"
+			ath="-134.9850237"
+			atv="-20.5752897"
+			scale="0.53000000000000"
+			depth="1000"
+			rx="0" ry="0" rz="0"
+			ox="0.0" oy="0.0"
+			tx="0" ty="0" tz="0"
+			alpha="0"
+			enabled="false"
+			distorted="true"
+			onclick="tween(hotspot[image_text].alpha, 0, 0.5); set(hotspot[image_text].enabled, false);" />
+
+
 		<hotspot name="spot1" style="skin_waves" ath="-161.625" atv="7.582"
 			linkedscene="scene_b08" linkedscene_lookat="-166.64,-12.82,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="-10.974" atv="5.757"
@@ -1272,5 +1300,37 @@
 			linkedscene="scene_b11" linkedscene_lookat="207.65,-8.76,120.0" />
 
 	</scene>
+
+	<scene name="scene_b13" title="13" onstart="" havevrimage.mobilevr="false"
+		havevrimage.no-mobilevr="true" thumburl="panos/b13.tiles/thumb.jpg" lat="" lng="" alt=""
+		heading="" soundurl="%CURRENTXML%/audio/Gentle_Breeze.mp3">
+
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
+			fovmax="140" limitview="auto" />
+
+		<preview url="panos/b13.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/b13.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/b13.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="skin_waves" ath="70.85178908030707"
+			atv="12.36532876894557"
+			linkedscene="scene_b09" linkedscene_lookat="72.74931862,4.24863753,120.0" />
+		<hotspot name="spot2" style="skin_waves" ath="149.45161313990138"
+			atv="9.30326602958909"
+			linkedscene="scene_b07" linkedscene_lookat="151.07305120,0.62322084,120.0" />
+		<hotspot name="spot3" style="skin_waves" ath="-159.03616403832774"
+			atv="3.71149191379780"
+			linkedscene="scene_b08" linkedscene_lookat="-163.53412353,-4.42158433,120.0" />
+
+	</scene>
+
 
 </krpano>
