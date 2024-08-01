@@ -1,4 +1,4 @@
-﻿<krpano version="1.21" title="Edificio AH" showerrors="false" debugmode="true">
+﻿<krpano version="1.21" title="Simulacion AH" showerrors="false" debugmode="true">
 
 	<include url="skin/vtourskin.xml" />
 	<include url="%VIEWER%/plugins/webvr.xml" />
@@ -190,18 +190,6 @@
 		design_text_shadow="1"
 	/>
 
-	<!--
-	    For an alternative skin design either change the <skin_settings> values 
-	    from above or optionally include one of the predefined designs from below.
-	-->
-	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
-	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
-	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
-	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
-	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
-	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
-
-
 	<scene name="scene_00-2" title="00-2" onstart="" thumburl="panos/00-2.tiles/thumb.jpg"
 		lat="18.48788333" lng="-69.96322500" alt="32.95" heading="0.0">
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -246,25 +234,11 @@
 			distorted="true"
 			onclick="ocultar();" />
 
-		<!-- <hotspot name="creditos"
-			type="image"
-			url="recursos/cartel_creditos.png"
-			ath="58.88163027393955"
-			atv="-7.61158048056916"
-			scale="0.25500000000000"
-			depth="1000"
-			rx="-8.09999999999999" ry="-32.00" rz="0"
-			ox="0.0" oy="0.0"
-			tx="0" ty="0" tz="0"
-			visible="false"
-			distorted="true" /> -->
-
-
 	</scene>
 
 	<scene name="scene_R0010004" title="Final_Pasillo_2piso" onstart=""
 		thumburl="panos/R0010004.tiles/thumb.jpg" lat="18.48771944" lng="-69.96353333" alt="27.60"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -284,7 +258,7 @@
 
 	<scene name="scene_R0010005" title="CoordinacionLab_MED_2piso" onstart=""
 		thumburl="panos/R0010005.tiles/thumb.jpg" lat="18.48774167" lng="-69.96351111" alt="27.89"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -306,7 +280,7 @@
 
 	<scene name="scene_R0010006" title="Punto_2piso" onstart=""
 		thumburl="panos/R0010006.tiles/thumb.jpg" lat="18.48780833" lng="-69.96353889" alt="27.89"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -320,7 +294,7 @@
 		</image>
 
 		<hotspot name="spot3" style="skin_waves" ath="3.946" atv="7.722"
-			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
+			linkedscene="scene_r0010007"   linkedscene_lookat="97.59,-17.1,120.0"/>
 		<hotspot name="spot4" style="skin_waves" ath="-174.608" atv="11.290"
 			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -328,7 +302,7 @@
 
 	<scene name="scene_R0010007" title="Interseccion_2piso" onstart=""
 		thumburl="panos/R0010007.tiles/thumb.jpg" lat="18.48784444" lng="-69.96353611" alt="27.89"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -343,17 +317,16 @@
 
 		<hotspot name="spot1" style="skin_waves" ath="-0.563" atv="5.739"
 			linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_waves" ath="98.396" atv="6.278"
-			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_waves" ath="98.425" atv="6.308"
+			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" linkedscene_lookat="3.82,-1.31,120.0"/>
 		<hotspot name="spot3" style="skin_waves" ath="-91.111" atv="4.460"
-			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
-
+			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" linkedscene_lookat="-180.82,0,120.0" />
 
 	</scene>
 
 	<scene name="scene_R0010008" title="EntradaLabs_2piso" onstart=""
 		thumburl="panos/R0010008.tiles/thumb.jpg" lat="18.48793889" lng="-69.96351111" alt="27.89"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -369,8 +342,8 @@
 
 		<hotspot name="spot1" style="skin_waves" ath="16.614" atv="8.217"
 			linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_waves" ath="-179.972" atv="13.064"
-			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_waves" ath="-179.812" atv="13.342"
+			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" linkedscene_lookat="-90.42, 0, 120.0" />
 
 
 	</scene>
@@ -403,7 +376,7 @@
 
 	<scene name="scene_R0010010" title="Final_PasilloLab_2piso" onstart=""
 		thumburl="panos/R0010010.tiles/thumb.jpg" lat="18.48794722" lng="-69.96352500" alt="27.60"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -424,7 +397,7 @@
 	<scene name="scene_R0010154" title="Laboratorio de CardiologÍa" onstart=""
 		havevrimage.mobilevr="false" havevrimage.no-mobilevr="true"
 		thumburl="panos/AHR0010154.tiles/thumb.jpg" lat="18.48797500" lng="-69.96349167" alt="27.50"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -442,7 +415,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_waves" ath="128.806" atv="23.042"
-			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
+			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" linkedscene_lookat="-90.42, 0, 120.0"/>
 		<hotspot name="spot2" style="skin_waves" ath="85.745" atv="19.717"
 			linkedscene="scene_r0010010" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot3" style="skin_waves" ath="-92.104" atv="4.978"
@@ -482,7 +455,7 @@
 
 	<scene name="scene_R0010011" title="Entrada_LabRE_2piso" onstart=""
 		thumburl="panos/R0010011.tiles/thumb.jpg" lat="18.48796111" lng="-69.96349167" alt="27.60"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -557,12 +530,11 @@
 			ox="0.0" oy="0.0"
 			x="-10.50" ty="0" tz="0" />
 
-
 	</scene>
 
 	<scene name="scene_R0010013" title="Ascensor_2piso" onstart=""
 		thumburl="panos/R0010013.tiles/thumb.jpg" lat="18.48797500" lng="-69.96347222" alt="27.50"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -678,7 +650,7 @@
 	</scene>
 	<scene name="scene_R0010015" title="Laboratorio obstetricia y ginecología" onstart=""
 		thumburl="panos/R0010015.tiles/thumb.jpg" lat="18.48796389" lng="-69.96354444" alt="23.39"
-		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		heading="0.0" soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -741,7 +713,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_waves" ath="-4.272" atv="5.269"
-			linkedscene="scene_puntodeencuentro_ah_aj" linkedscene_lookat="0.0,0.0,120.0" />
+			linkedscene="scene_puntodeencuentro_ah_aj" linkedscene_lookat="160.0,0.0,120.0" />
 
 		<hotspot name="cartel_bosquesito"
 			type="image"
@@ -779,7 +751,7 @@
 		<hotspot name="spot1" style="skin_waves" ath="161.0544749 " atv="-0.9236492"
 			linkedscene="scene_ruta1_bosquesito" linkedscene_lookat="23.42,-0.0,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="-7.2405140" atv="1.2725447"
-			linkedscene="scene_debajo_aj" linkedscene_hoffset="0.0" use3dtransition="true" />
+			linkedscene="scene_debajo_aj" linkedscene_hoffset="0.0" linkedscene_lookat="170.42,0,120.0"/>
 
 	</scene>
 
@@ -799,7 +771,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_waves" ath="-155.103" atv="8.954"
-			linkedscene="scene_puntodeencuentro_ah_aj" linkedscene_lookat="191.9,4.45,120.0" />
+			linkedscene="scene_puntodeencuentro_ah_aj" linkedscene_lookat="1.9,4.45,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="8.394" atv="4.332"
 			linkedscene="scene_01-3" linkedscene_lookat="274.84,12.13,120.0" />
 		<hotspot name="cartel_ah2"
@@ -867,7 +839,7 @@
 
 	<scene name="scene_01-1" title="01-1" onstart="" thumburl="panos/01-1.tiles/thumb.jpg"
 		lat="18.48769722" lng="-69.96397222" alt="32.40" heading="0.0"
-		soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
@@ -887,7 +859,7 @@
 
 	<scene name="scene_01-2" title="01-2" onstart="" thumburl="panos/01-2.tiles/thumb.jpg"
 		lat="18.48769722" lng="-69.96397222" alt="32.40" heading="0.0"
-		soundurl="%CURRENTXML%/audio/Musica_Hospital.mp3">
+		soundurl="%CURRENTXML%/audio/Musica_Hospital_2.mp3">
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
@@ -900,7 +872,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_waves" ath="-7.023" atv="5.081"
-			linkedscene="scene_01-3" linkedscene_hoffset="0.0" use3dtransition="true" />
+			linkedscene="scene_01-3" linkedscene_hoffset="0.0" linkedscene_lookat="99,-1.06,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="104.708" atv="12.361"
 			linkedscene="scene_01-1" linkedscene_lookat="-171.32,-1.06,120.0" />
 	</scene>
@@ -926,7 +898,7 @@
 			linkedscene="scene_01-2" linkedscene_lookat="103.58,12.1,120.0" />
 	</scene>
 
-	<scene name="scene_b01" title="Inicio" onstart="" havevrimage.mobilevr="false"
+	<scene name="scene_b01" title="Inicio Bosquecito" onstart="" havevrimage.mobilevr="false"
 		havevrimage.no-mobilevr="true" thumburl="panos/b01.tiles/thumb.jpg" lat="18.48767222"
 		lng="-69.96385833" alt="24.29" heading="0.0" soundurl="%CURRENTXML%/audio/Gentle_Breeze.mp3">
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -1220,6 +1192,9 @@
 			linkedscene="scene_b07" linkedscene_lookat="187.26,3.58,120.0" />
 		<hotspot name="spot2" style="skin_waves" ath="-8.614" atv="-1.329"
 			linkedscene="scene_b01" linkedscene_lookat="-138.35,-6.66,120.0" />
+		<hotspot name="spot3" style="skin_waves" ath="-173.770" atv="6.388"
+			linkedscene="scene_b13" linkedscene_lookat="-97.59,-17.1,120.0" />
+			
 
 	</scene>
 
