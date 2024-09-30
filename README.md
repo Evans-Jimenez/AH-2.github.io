@@ -1,4 +1,4 @@
-# Tour de Simulacion _(AH, Segundo Piso)_
+# Tour de Simulacion _(INTEC, Edificio AH, Segundo Piso)_
 
 ## Descripción
 
