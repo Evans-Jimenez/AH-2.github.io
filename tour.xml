@@ -436,7 +436,7 @@
 
 		<hotspot name="image_text"
 			type="image"
-			url="recursos/lab_cardiologia.png"
+			url="recursos/cardiologia.png"
 			ath="12.625"
 			atv="-5.394"
 			scale="0.53000000000000"
@@ -678,7 +678,7 @@
 
 		<hotspot name="image_text"
 			type="image"
-			url="recursos/lab_obstetricia.png"
+			url="recursos/obstetricia.png"
 			ath="12.625"
 			atv="-5.394"
 			scale="0.53"
